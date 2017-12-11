@@ -1,4 +1,5 @@
-# BittrexTrailingstop
+# Bittrex trailing stop
+
 Trailing stop and profit taking script for Bittrex exchange
 
 Depends: BCinclude, requests, hmac, time, hashlib, sys, csv  
