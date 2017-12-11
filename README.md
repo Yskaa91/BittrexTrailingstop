@@ -1,6 +1,7 @@
 # Bittrex trailing stop
 
-Trailing stop and profit taking script for Bittrex exchange
+Automatic trailing stop and profit taking script for Bittrex exchange  
+<i>For people who are sick of missing those pumps overnight</i>
 
 Depends: BCinclude, requests, hmac, time, hashlib, sys, csv  
 Python 3.x
