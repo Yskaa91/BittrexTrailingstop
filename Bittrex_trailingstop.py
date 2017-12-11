@@ -1,6 +1,6 @@
 import sqlite3, requests, hmac, time, hashlib, sys, csv
 
-c = sqlite3.connect("FILELOCATION/BittrexDB.db", isolation_level=None).dbcon.cursor()
+c = sqlite3.connect("BittrexDB.db", isolation_level=None).dbcon.cursor()
 c.execute('PRAGMA journal_mode=wal')
 
 apikey = ''
