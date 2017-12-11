@@ -1,29 +1,13 @@
-import BCinclude, requests, hmac, time, hashlib, sys, csv
+import sqlite3, requests, hmac, time, hashlib, sys, csv
 
-c = BCinclude.dbcon.cursor()
+c = sqlite3.connect("FILELOCATION/BittrexDB.db", isolation_level=None).dbcon.cursor()
 c.execute('PRAGMA journal_mode=wal')
 
 apikey = ''
 secret = ''
 
-#CSV has 4 values
-#1: bittrex coin/token name/index (BCC, ETH ..)
-#2: buy price
-#3: trailing percentage. Used for stoploss, or when using the margin option
-#   it is the maximum loss or profit (2 - trailing percentage) that has to
-#   be reached before selling.
-#4: type
-#    - stoploss: trailing stop with loss taking allowed
-#    - stophigh: trailing stop, but only sell when it is above the buy price
-#    - margin: sell when a certain loss or profit is reached
-#
-# EXAMPLES
-# THC, 0.00000870, 0.90, stoploss
-# XEM, 0.00003425, 0.95, margin
-#   last one sells when the price dropped 5% (0.95), or has risen 5% (2-0.95 = 1.05)
-
 while True:
-    with open('include/wallet.csv', 'r', encoding='utf-8') as f:
+    with open('wallet.csv', 'r', encoding='utf-8') as f:
         reader = csv.reader(f, delimiter=',')
         kw_list = list(reader)
     
