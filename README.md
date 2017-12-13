@@ -15,7 +15,7 @@ No programming knowledge is required. All assets are controlled using a configur
 3: trailing percentage. Used for trailing stop. When using the margin option it is the maximum loss or profit that has to be reached before selling.  
 4: type  
     - stoploss: trailing stop with loss taking allowed  
-    - stophigh: trailing stop, but only sell when it is above the buy price. Ideal for utilizing pumps of you assets you want to get rid of. 
+    - stophigh: trailing stop, but only sell when it is above the buy price. Ideal for utilizing pumps of assets you want to get rid of. 
     - margin: sell when a certain loss or profit is reached  
 
 EXAMPLES  
