@@ -22,3 +22,5 @@ EXAMPLES
 THC, 0.00000870, 0.90, stoploss  
 XEM, 0.00003425, 0.95, margin  
  - last one sells when the price dropped 5% (0.95), or has risen 5% (2-0.95 = 1.05)
+
+! Please remember to empty the database before running the script
